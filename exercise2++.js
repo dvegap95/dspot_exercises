@@ -20,7 +20,7 @@ emptyDeckGroup = {
 };
 
 function fullDecks(deck) {
-  let min = inf; //maximum possible of cards in a suite
+  let min = Infinity; //maximum possible of cards in a suite
   for (const suit_key in deck) {
     if (Object.hasOwnProperty.call(deck, suit_key)) {
       const suit = deck[suit_key];
@@ -48,3 +48,5 @@ function orderCards(cards) {
   });
   return fullDecks(deckGroup);
 }
+
+module.exports = orderCards;
